@@ -1,0 +1,51 @@
+
+.App {
+    box-sizing: border-box;
+    background: linear-gradient(#282c34, grey);
+    font-size: calc(10px + 2vmin);
+    min-height: 100vh;
+    padding:2% 5%;
+    display:flex;
+    flex-direction: column;
+}
+
+.characterPortrait {
+  height: 40vmin;
+  pointer-events: none;
+  border-radius: 10% 25%;
+  border-image: linear-gradient(to right bottom, #260B3C, #a053df);
+  border-style: solid;
+  max-width: 230px;
+}
+
+.characterName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0 4% 1% 4%;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+button {
+  border-radius: 5px;
+  background: #d4af37;
+  padding:12px;
+  font-weight: 600;
+  margin: 5px;
+  color: antiquewhite;
+}
+
