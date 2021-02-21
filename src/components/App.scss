@@ -9,6 +9,10 @@
     flex-direction: column;
 }
 
+.container {
+    font-size: .5em;
+}
+
 .characterPortrait {
   height: 40vmin;
   pointer-events: none;
@@ -46,5 +50,10 @@ button {
   font-weight: 600;
   margin: 5px;
   color: antiquewhite;
+}
+
+p {
+    margin: 5px 0 5px 0;
+    padding: 2px 4px;
 }
 

@@ -15,7 +15,6 @@
 }
 
 .selectedManeuver {
-    font-size: .5em;
     font-family: 'Open Sans', sans-serif;
     padding: 10px 10px;
     border-radius: 5px;
@@ -26,6 +25,10 @@
         margin: 5px 0 5px 0;
         padding: 2px 4px;
     }
+}
+
+.expendedStatus--true{
+    background: red;
 }
 
 .maneuverDescription {
