@@ -1,10 +1,17 @@
-
+#root {
+    background-image:url('../Gold-background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .App {
     box-sizing: border-box;
-    background: linear-gradient(#282c34, grey);
+    background: linear-gradient(#d4af37, #efe1b3);
+//     background: linear-gradient(#282c34, grey);
     font-size: calc(10px + 2vmin);
     min-height: 100vh;
-    padding:2% 5%;
+    margin:0% 5%;
+    padding:2% 2%;
     display:flex;
     flex-direction: column;
 }
@@ -18,7 +25,6 @@
   pointer-events: none;
   border-radius: 10% 25%;
   border-image: linear-gradient(to right bottom, #260B3C, #a053df);
-  border-style: solid;
 }
 
 .characterName {
@@ -27,8 +33,11 @@
   align-items: center;
   justify-content: center;
   color: white;
-  padding: 0 4% 1% 4%;
+  padding-bottom: 1%;
+  margin-top: 0;
+  margin-bottom: 2%;
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -45,7 +54,7 @@
 
 button {
   border-radius: 5px;
-  background: #d4af37;
+  background: #00A86B;
   padding:12px;
   font-weight: 600;
   margin: 5px;
@@ -62,11 +71,16 @@ h1 {
     margin-bottom: 0.5em;
 }
 
+h2 {
+    border-bottom: 2px solid;
+    margin-bottom: 0.5em;
+}
+
 .selectedObject {
     font-family: 'Open Sans', sans-serif;
     padding: 10px 10px;
     border-radius: 5px;
-    background: #d4af37;
+    background: #00A86B;
     p {
         border-radius: 5px;
         background: antiquewhite;

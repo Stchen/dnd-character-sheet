@@ -16,7 +16,7 @@ class App extends PureComponent {
   render() {
     return (
       <div className="App">
-        <header className="characterName">{sigmundInfo.name}</header>
+        <h2 className="characterName">{sigmundInfo.name}</h2>
         <div className="container">
           <img src={sigmundPhoto} className="characterPortrait" alt="characterPortrait" />
           <h2>Stances: <strong>Iron Guards Glare, Martial Spirit</strong></h2>
