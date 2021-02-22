@@ -1,8 +1,10 @@
 import { createAction } from 'redux-actions';
 import { Sigmund as sigmundInfo } from '../constants/Characters';
 
+const startingManeuverAmount = 3
+
 const initState = {
-    activatedManeuvers: activateManeuver(sigmundInfo.maneuvers, [], 2),
+    activatedManeuvers: activateManeuver(sigmundInfo.maneuvers, [], startingManeuverAmount),
     maneuverDetail:{},
 }
 
@@ -10,7 +12,7 @@ function activateManeuver( knownManeuvers, activatedManeuvers, numOfWantedManeuv
     if(knownManeuvers.length === 0 || numOfWantedManeuvers <= 0) {
         return activatedManeuvers;
     }else if(knownManeuvers.length === activatedManeuvers.length) {
-        return activateManeuver(sigmundInfo.maneuvers, [], 2)
+        return activateManeuver(sigmundInfo.maneuvers, [], startingManeuverAmount)
     }
     const unActivatedManeuvers = knownManeuvers.filter(maneuver => !activatedManeuvers.find(x => x.name === maneuver.name));
     const randomIndex = Math.floor(Math.random() * unActivatedManeuvers.length);
@@ -18,7 +20,7 @@ function activateManeuver( knownManeuvers, activatedManeuvers, numOfWantedManeuv
     return activateManeuver(unActivatedManeuvers,  [...activatedManeuvers, selectedManeuver], numOfWantedManeuvers-1)
 }
 
-function maneuverUsed(activatedManeuvers, expendedManeuver){
+function expendActivateManeuver(activatedManeuvers, expendedManeuver){
     const newArray = activatedManeuvers.map(
         maneuver => {
             if(maneuver.name === expendedManeuver.name){
@@ -38,7 +40,7 @@ export default function maneuver( state = initState, {type, payload}) {
         case "SHOW_MANEUVER_DETAIL":
             return {...state, maneuverDetail:payload};
         case "EXPEND_MANEUVER":
-            return {...state, activatedManeuvers: maneuverUsed(state.activatedManeuvers, payload)}
+            return {...state, activatedManeuvers: expendActivateManeuver(state.activatedManeuvers, payload)}
         default:
             return state;
     }
