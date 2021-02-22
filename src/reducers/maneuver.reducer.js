@@ -36,7 +36,7 @@ export default function maneuver( state = initState, {type, payload}) {
         case "ADD_MANEUVER":
             return {...state, maneuverDetail:{}, activatedManeuvers: activateManeuver(sigmundInfo.maneuvers, state.activatedManeuvers)};
         case "RESTART_MANEUVER_LOOP":
-            return {...state, maneuverDetail:{}, activatedManeuvers: activateManeuver(sigmundInfo.maneuvers, [], 2)};
+            return {...state, maneuverDetail:{}, activatedManeuvers: activateManeuver(sigmundInfo.maneuvers, [], startingManeuverAmount)};
         case "SHOW_MANEUVER_DETAIL":
             return {...state, maneuverDetail:payload};
         case "EXPEND_MANEUVER":

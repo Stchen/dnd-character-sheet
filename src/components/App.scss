@@ -57,3 +57,24 @@ p {
     padding: 2px 4px;
 }
 
+h1 {
+    border-bottom: 2px solid;
+    margin-bottom: 0.5em;
+}
+
+.selectedObject {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background: #d4af37;
+    p {
+        border-radius: 5px;
+        background: antiquewhite;
+        margin: 5px 0 5px 0;
+        padding: 2px 4px;
+    }
+}
+
+.objectDescription {
+    white-space:pre-line;
+}

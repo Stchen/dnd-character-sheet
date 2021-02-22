@@ -3,7 +3,10 @@ import { PropTypes as ptypes } from 'prop-types';
 import { compose, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { selectActivatedManeuvers, selectManeuverDetail } from "../selectors/maneuver.selector";
+import {
+    selectActivatedManeuvers,
+    selectManeuverDetail,
+} from "../selectors/maneuver.selector";
 import { newManeuverActivated, restartManLoop, showManeuverDetail, expendManeuver} from "../reducers/maneuver.reducer";
 import './Maneuver.scss';
 import isEmpty from 'lodash/isEmpty';
@@ -24,14 +27,18 @@ const Maneuver = ({
                 <button className="maneuver-activate" onClick={newManeuverActivated}> Activate next Maneuver </button>
                 <button className="maneuver-restart" onClick={restartManLoop}> Restart Maneuver Loop </button>
             </div>
-            { activatedManeuvers.map( maneuver => ( <button className = {`maneuverButton expendedStatus--${maneuver.maneuverExpended}`} onClick={() => showManeuverDetail(maneuver)}>{maneuver.name}</button> ) )}
+            { activatedManeuvers.map( maneuver => (
+                <button key={maneuver.name} className = {`maneuverButton expendedStatus--${maneuver.maneuverExpended}`} onClick={() => showManeuverDetail(maneuver)}>
+                    {maneuver.name}
+                </button>
+            ))}
             { showManeuverDetails &&
-            <div className={`selectedManeuver expendedStatus--${maneuverExpendedStatus}`}>
+            <div className={`selectedObject expendedStatus--${maneuverExpendedStatus}`}>
                 <p>Level: <strong>{maneuverDetail.level}</strong></p>
                 <p>Casting Time: <strong>{maneuverDetail.castingTime}</strong></p>
                 <p>Range: <strong>{maneuverDetail.range}</strong></p>
                 <p>Target: <strong>{maneuverDetail.target}</strong></p>
-                <p className="maneuverDescription">{maneuverDetail.description}</p>
+                <p className="objectDescription">{maneuverDetail.description}</p>
                 <button className={`maneuver-expend expendedStatus--${maneuverExpendedStatus}`} onClick={() => expendManeuver(maneuverDetail)}> Expend Maneuver </button>
             </div>}
         </div>

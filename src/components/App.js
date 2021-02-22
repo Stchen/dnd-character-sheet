@@ -4,6 +4,7 @@ import './App.scss';
 import { Sigmund as sigmundInfo } from '../constants/Characters';
 
 import Maneuver from './Maneuver';
+import Feats from './Feats';
 
 
 class App extends PureComponent {
@@ -18,8 +19,9 @@ class App extends PureComponent {
         <header className="characterName">{sigmundInfo.name}</header>
         <div className="container">
           <img src={sigmundPhoto} className="characterPortrait" alt="characterPortrait" />
-          <p>Stances: <strong>Iron Guards Glare, Martial Spirit</strong></p>
-          <Maneuver maneuverObject = {sigmundInfo.maneuvers} />
+          <h2>Stances: <strong>Iron Guards Glare, Martial Spirit</strong></h2>
+          <Maneuver />
+          <Feats featsArray = {sigmundInfo.feats} />
         </div>
       </div>
     );

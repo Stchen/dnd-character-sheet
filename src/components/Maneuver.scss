@@ -14,23 +14,6 @@
     outline: none;
 }
 
-.selectedManeuver {
-    font-family: 'Open Sans', sans-serif;
-    padding: 10px 10px;
-    border-radius: 5px;
-    background: #d4af37;
-    p {
-        border-radius: 5px;
-        background: antiquewhite;
-        margin: 5px 0 5px 0;
-        padding: 2px 4px;
-    }
-}
-
 .expendedStatus--true{
     background: red;
-}
-
-.maneuverDescription {
-    white-space:pre-line;
 }
