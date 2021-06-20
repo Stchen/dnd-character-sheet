@@ -2,6 +2,7 @@ import { createAction } from 'redux-actions';
 import { Sigmund as sigmundInfo } from '../constants/Characters';
 
 const startingManeuverAmount = 3
+const maxManeuvers = 5
 
 const initState = {
     activatedManeuvers: activateManeuver(sigmundInfo.maneuvers, [], startingManeuverAmount),
@@ -11,7 +12,7 @@ const initState = {
 function activateManeuver( knownManeuvers, activatedManeuvers, numOfWantedManeuvers = 1){
     if(knownManeuvers.length === 0 || numOfWantedManeuvers <= 0) {
         return activatedManeuvers;
-    }else if(knownManeuvers.length === activatedManeuvers.length) {
+    }else if(activatedManeuvers.length === maxManeuvers) {
         return activateManeuver(sigmundInfo.maneuvers, [], startingManeuverAmount)
     }
     const unActivatedManeuvers = knownManeuvers.filter(maneuver => !activatedManeuvers.find(x => x.name === maneuver.name));

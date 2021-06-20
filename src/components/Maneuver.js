@@ -62,6 +62,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
     showManeuverDetail: bindActionCreators(showManeuverDetail, dispatch),
+
     newManeuverActivated: bindActionCreators(newManeuverActivated, dispatch),
     restartManLoop: bindActionCreators(restartManLoop, dispatch),
     expendManeuver: bindActionCreators(expendManeuver, dispatch),

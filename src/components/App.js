@@ -19,6 +19,8 @@ class App extends PureComponent {
         <h2 className="characterName">{sigmundInfo.name}</h2>
         <div className="container">
           <img src={sigmundPhoto} className="characterPortrait" alt="characterPortrait" />
+          <div> HP: 44 </div>
+          <div> Lvl: 5 </div>
           <h2>Stances: <strong>Iron Guards Glare, Martial Spirit</strong></h2>
           <Maneuver />
           <Feats featsArray = {sigmundInfo.feats} />
