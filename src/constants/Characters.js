@@ -3,7 +3,7 @@ export const Sigmund = {
     level: 5,
     HP: 48,
     maneuvers: [
-       //commented out maneuvers means I've chosen not to ready those maneuvers
+       //commented out maneuvers means I've chosen not to ready those maneuvers for this day
        {
            name:"Crusader's Strike",
            spellSchool:"Devoted Spirit(Strike)",
@@ -71,7 +71,7 @@ export const Sigmund = {
            castingTime: "1 swift action",
            range: "10 ft.",
            target: "One ally",
-           description: "When you use this maneuver, select an ally within range. Their initiative count immediately equals your initiative count! They then act on her new initiative count as normal. If they have already acted in the current round, they can act again. If this maneuver would not change your ally’s initiative count, it has no effect. If they have not yet acted during this round, their initiative count changes, and they acts on that count as normal. They do not act again on her original initiative count.",
+           description: "When you use this maneuver, select an ally within range. Their initiative count immediately equals your initiative count-1! They then act on her new initiative count as normal. If they have already acted in the current round, they can act again. If this maneuver would not change your ally’s initiative count, it has no effect. If they have not yet acted during this round, their initiative count changes, and they acts on that count as normal. They do not act again on her original initiative count.",
            maneuverExpended: false,
        },
                ],
