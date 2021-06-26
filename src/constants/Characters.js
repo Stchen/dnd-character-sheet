@@ -1,7 +1,8 @@
 export const Sigmund = {
     name: "Sigmund",
     level: 5,
-    HP: 48,
+    health: 48,
+    damageResistance: 3,
     maneuvers: [
        //commented out maneuvers means I've chosen not to ready those maneuvers for this day
        {

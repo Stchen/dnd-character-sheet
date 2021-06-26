@@ -5,7 +5,7 @@ import { Sigmund as sigmundInfo } from '../constants/Characters';
 
 import Maneuver from './Maneuver';
 import Feats from './Feats';
-
+import Health from './Health'
 
 class App extends PureComponent {
 
@@ -19,7 +19,7 @@ class App extends PureComponent {
         <h2 className="characterName">{sigmundInfo.name}</h2>
         <div className="container">
           <img src={sigmundPhoto} className="characterPortrait" alt="characterPortrait" />
-          <div> HP: 44 </div>
+          <Health />
           <div> Lvl: 5 </div>
           <h2>Stances: <strong>Iron Guards Glare, Martial Spirit</strong></h2>
           <Maneuver />
