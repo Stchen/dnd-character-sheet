@@ -1,0 +1,25 @@
+.healthBarButton{
+    width: 3em;
+//     height: 3em;
+}
+.healthBarInput{
+    width: 4ex;
+    height: 5ex
+}
+.takeDamage {
+    background:#880808
+}
+
+#delayedDamageBar, #healthBar {
+    width:27%;
+}
+
+#delayedDamageBar[value]::-webkit-progress-value {
+    background-color:#cc7000
+}
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+}

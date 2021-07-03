@@ -5,7 +5,7 @@ import { Sigmund as sigmundInfo } from '../constants/Characters';
 
 import Maneuver from './Maneuver';
 import Feats from './Feats';
-import Health from './Health'
+import Health from './HealthBar'
 
 class App extends PureComponent {
 

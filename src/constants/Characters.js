@@ -2,6 +2,7 @@ export const Sigmund = {
     name: "Sigmund",
     level: 5,
     health: 48,
+    delayedDamagePool: 10,
     damageResistance: 3,
     maneuvers: [
        //commented out maneuvers means I've chosen not to ready those maneuvers for this day
@@ -72,15 +73,15 @@ export const Sigmund = {
            castingTime: "1 swift action",
            range: "10 ft.",
            target: "One ally",
-           description: "When you use this maneuver, select an ally within range. Their initiative count immediately equals your initiative count-1! They then act on her new initiative count as normal. If they have already acted in the current round, they can act again. If this maneuver would not change your ally’s initiative count, it has no effect. If they have not yet acted during this round, their initiative count changes, and they acts on that count as normal. They do not act again on her original initiative count.",
+           description: "When you use this maneuver, select an ally within range. Their initiative count immediately equals your initiative count-1! They then act on their new initiative count as normal. If they have already acted in the current round, they can act again. If this maneuver would not change your ally’s initiative count, it has no effect. If they have not yet acted during this round, their initiative count changes, and they acts on that count as normal. They do not act again on her original initiative count.",
            maneuverExpended: false,
        },
                ],
     feats:[
-        {
-            name: "Stand Still",
-            description: "When a foe's movement out of a square you threaten grants you an attack of opportunity, you can give up that attack and instead attempt to stop your foe in his tracks. Make your attack of opportunity normally. If you hit your foe, he must succeed on a Reflex save against a DC of 10 + your damage roll (the opponent does not actually take damage), or immediately halt as if he had used up his move actions for the round. Since you use the Stand Still feat in place of your attack of opportunity, you can do so only a number of times per round equal to the number of times per round you could make an attack of opportunity (normally just one).",
-        },
+//        {
+//            name: "Stand Still",
+//            description: "When a foe's movement out of a square you threaten grants you an attack of opportunity, you can give up that attack and instead attempt to stop your foe in his tracks. Make your attack of opportunity normally. If you hit your foe, he must succeed on a Reflex save against a DC of 10 + your damage roll (the opponent does not actually take damage), or immediately halt as if he had used up his move actions for the round. Since you use the Stand Still feat in place of your attack of opportunity, you can do so only a number of times per round equal to the number of times per round you could make an attack of opportunity (normally just one).",
+//        },
         {
             name: "Combat Reflexes",
             description: "When foes leave themselves open, you may make a number of additional attacks of opportunity equal to your Dexterity bonus. For example, a fighter with a Dexterity of 15 can make a total of three attacks of opportunity in 1 round--the one attack of opportunity any character is entitled to, plus two more because of his +2 Dexterity bonus. If four goblins move out of the character's threatened squares, he can make one attack of opportunity each against three of the four. You can still make only one attack of opportunity per opportunity. With this feat, you may also make attacks of opportunity while flat-footed.",
@@ -88,6 +89,13 @@ export const Sigmund = {
         {
             name: "Extra Granted Maneuver",
             description: "You begin each encounter with one additional readied maneuver granted. This teat also applies when you determine a new set of granted maneuvers after recovering expended maneuvers. For example, if you are a 5th-level crusader, you normally begin an encounter or finish recovering expended maneuvers with two ofyour five readied maneuvers granted, and the remaining three maneuvers withheld. With this feat, three of your five readied maneuvers are granted, and only two are withheld. Naturally, this benefit provides you with a better array of maneuver options early in a battle.",
+        },
+        {
+            name: "Combat Expertise",
+            description: "When you use the attack action or the full attack action in melee, you can take a penalty of as much as -5 on your attack roll and add the same number (+5 or less) as a dodge bonus to your Armor Class. This number may not exceed your base attack bonus. The changes to attack rolls and Armor Class last until your next action."
         }
     ],
+    abilities:[
+
+    ]
 }

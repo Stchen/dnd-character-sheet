@@ -8,6 +8,7 @@ import {
     selectManeuverDetail,
 } from "../selectors/maneuver.selector";
 import { newManeuverActivated, restartManLoop, showManeuverDetail, expendManeuver} from "../reducers/maneuver.reducer";
+import { resetDelayDamage } from "../reducers/health.reducer";
 import './Maneuver.scss';
 import isEmpty from 'lodash/isEmpty';
 
@@ -16,6 +17,7 @@ const Maneuver = ({
     newManeuverActivated,
     restartManLoop,
     showManeuverDetail,
+    resetDelayDamage,
     expendManeuver,
     maneuverDetail,
 }) => {
@@ -24,11 +26,11 @@ const Maneuver = ({
     return(
         <div className="maneuvers">
             <div className ="maneuver-controls">
-                <button className="maneuver-activate" onClick={newManeuverActivated}> Activate next Maneuver </button>
+                <button className="maneuver-activate" onClick={()=>{newManeuverActivated(); resetDelayDamage()}}> Activate next Maneuver </button>
                 <button className="maneuver-restart" onClick={restartManLoop}> Restart Maneuver Loop </button>
             </div>
             { activatedManeuvers.map( maneuver => (
-                <button key={maneuver.name} className = {`maneuverButton expendedStatus--${maneuver.maneuverExpended}`} onClick={() => showManeuverDetail(maneuver)}>
+                <button key={maneuver.name} className = {`maneuverButton expendedStatus--${maneuver.maneuverExpended}`} onClick={() => {showManeuverDetail(maneuver)}}>
                     {maneuver.name}
                 </button>
             ))}
@@ -62,7 +64,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
     showManeuverDetail: bindActionCreators(showManeuverDetail, dispatch),
-
+    resetDelayDamage: bindActionCreators(resetDelayDamage, dispatch),
     newManeuverActivated: bindActionCreators(newManeuverActivated, dispatch),
     restartManLoop: bindActionCreators(restartManLoop, dispatch),
     expendManeuver: bindActionCreators(expendManeuver, dispatch),
