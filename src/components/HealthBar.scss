@@ -1,3 +1,7 @@
+.health{
+    margin-left: 2em;
+    margin-right: 2em;
+}
 .healthBarButton{
     width: 3em;
 //     height: 3em;
@@ -11,7 +15,7 @@
 }
 
 #delayedDamageBar, #healthBar {
-    width:27%;
+    width:100%;
 }
 
 #delayedDamageBar[value]::-webkit-progress-value {

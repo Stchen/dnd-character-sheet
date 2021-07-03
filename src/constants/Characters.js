@@ -1,7 +1,7 @@
 export const Sigmund = {
     name: "Sigmund",
     level: 5,
-    health: 48,
+    maxHealth: 48,
     delayedDamagePool: 10,
     damageResistance: 3,
     maneuvers: [
@@ -96,6 +96,29 @@ export const Sigmund = {
         }
     ],
     abilities:[
-
+        {
+            name: "Zealous Surge (Ex)",
+            description: "Once per day, you can opt to reroll a single saving throw. Must abide by the second roll. Doesn't require action. Can be after result of first roll but needs to be before DM tells you if it fails or suceeds."
+        },
+        {
+            name: "Steely Resolve (Ex)",
+            description: "You have a delayed damage pool of total 10 points of damage. It gets applied at end of next turn. Special effects like stun still go through. When you receive healing, you choose whether it affects your damage pool, your hit points, or both"
+        },
+        {
+            name: "Furious Counterstrike (Ex)",
+            description: "Gain a bonus on attack rolls and damage rolls equal to value of delay damage pool divided by 5(rounded down). Max bonus of +6 for now."
+        },
+        {
+            name: "Indomitable soul",
+            description: "You add your Charisma bonus (if any) as a bonus on Will saves"
+        },
+        // {
+        //     name: "",
+        //     description: ""
+        // },
+        // {
+        //     name: "",
+        //     description: ""
+        // },
     ]
 }

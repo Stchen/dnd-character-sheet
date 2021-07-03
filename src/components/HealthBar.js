@@ -8,7 +8,7 @@ import {
     selectHealth,
     selectDelayedDamage
 } from "../selectors/health.selector";
-import { gainHealth, takeDamage, loseDirectHealth} from "../reducers/health.reducer";
+import { gainHealth, takeDamage, loseDirectHealth, resetDelayDamage} from "../reducers/health.reducer";
 
 class HealthBar extends React.Component {
     constructor(props){
@@ -29,17 +29,20 @@ class HealthBar extends React.Component {
     render(){
         return(
             <div className="health">
-                <progress id="healthBar" value={this.props.health} max={sigmundInfo.health}></progress>
-                HP: {this.props.health}
+                HP: {this.props.health}/{sigmundInfo.maxHealth}
+                <progress id="healthBar" value={this.props.health} max={sigmundInfo.maxHealth}></progress>
                 <br/>
+                Delayed Damage: {this.props.delayedDamage}/{sigmundInfo.delayedDamagePool}
                 <progress id="delayedDamageBar" value={this.props.delayedDamage} max={sigmundInfo.delayedDamagePool}></progress>
-                Delayed Damage: {this.props.delayedDamage}
                 <form onSubmit={this.handleSubmit}>
                     <input className="healthBarInput" type="number" value={this.state.healthChange} onChange={this.handleHealthChange} />
                     <button className="healthBarButton gainHealth" onClick={() => this.props.gainHealth(this.state.healthChange)}> + </button>
                     <button className="healthBarButton takeDamage" onClick={() => this.props.takeDamage(this.state.healthChange)}> - </button>
                     <button className="loseDirectHealth takeDamage" onClick={() => this.props.loseDirectHealth(this.state.healthChange)}>
                         Lose Direct Health
+                    </button>
+                    <button className="applyDelayedDamage takeDamage" onClick={() => this.props.applyDelayedHealth()}>
+                        Apply Delayed Damage
                     </button>
                 </form>
 
@@ -64,7 +67,8 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
     gainHealth: bindActionCreators(gainHealth, dispatch),
     takeDamage: bindActionCreators(takeDamage, dispatch),
-    loseDirectHealth: bindActionCreators(loseDirectHealth, dispatch)
+    loseDirectHealth: bindActionCreators(loseDirectHealth, dispatch),
+    applyDelayedHealth: bindActionCreators(resetDelayDamage, dispatch)
 })
 
 export default compose(connect(mapStateToProps, mapDispatchToProps))(HealthBar)
