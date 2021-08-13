@@ -1,7 +1,7 @@
 export const Sigmund = {
     name: "Sigmund",
-    level: 5,
-    maxHealth: 48,
+    level: 6,
+    maxHealth: 54,
     delayedDamagePool: 10,
     damageResistance: 3,
     maneuvers: [
@@ -27,13 +27,13 @@ export const Sigmund = {
            maneuverExpended: false,
        },
        {
-           name:"Stone Bones",
-           spellSchool:"Stone Dragon",
-           level:"Crusader 1",
-           castingTime:"1 standard action",
+           name:"Defensive Rebuke",
+           spellSchool:"Devoted Spirit",
+           level:"Crusader 3",
+           castingTime:"1 swift action",
            range:"Personal",
            target:"You",
-           description:"You focus your energy to enhance your defenses, drawing on the power of your weapon's impact with a foe to toughen yourself against a counterattack.\n\nWhen you use this maneuver, you make a single melee attack. If this attack hits, you gain damage reduction 5/adamantine for 1 round.",
+           description:"Each enemy you strike after you initiate this maneuver becomes vulnerable to your further attacks. If such an opponent attacks anyone other than you in melee for the duration of the maneuver, that attack provokes an attack of opportunity from you (each separate attack a target makes provokes an attack of opportunity, making this boost especially lethal if you have Combat Reflexes). Enemies you strike become aware of the consequences of the maneuver.",
            maneuverExpended: false,
        },
 //       {
@@ -111,6 +111,14 @@ export const Sigmund = {
         {
             name: "Indomitable soul",
             description: "You add your Charisma bonus (if any) as a bonus on Will saves"
+        },
+        {
+            name: "Smite (Ex)",
+            description: "Driven by the courage of your convictions and the ironclad strength of your beliefs, you can strike back at those who dare stand against your cause. Starting at 6th level, once per day, you can concentrate all your anger, hatred, and determination into a single attack. On the next melee attack you make, you gain a bonus on your attack roll equal to your Charisma bonus (if any) and a bonus on damage equal to your crusader level. At 18th level, you gain an additional use of smite per day."
+        },
+        {
+            name: "Riposte",
+            description: "If you use Combat Expertise to increase your Armor Class, the first opponent to attack and miss you for that round provokes an attack of opportunity from you."
         },
         // {
         //     name: "",
