@@ -1,7 +1,7 @@
 export const Sigmund = {
     name: "Sigmund",
-    level: 6,
-    maxHealth: 54,
+    level: 7,
+    maxHealth: 63,
     delayedDamagePool: 10,
     damageResistance: 3,
     maneuvers: [
@@ -56,14 +56,24 @@ export const Sigmund = {
 //           description:"You batter aside your foes defenses with a vicious, overwhelming attack, leaving him vulnerable to your allies' blows.\n\nAs part of this maneuver, you make a melee attack against an opponent you threaten. If this attack hits, all your allies gain a +4 bonus on ranged and melee attacks against that target until the start of your next turn.",
 //           maneuverExpended: false,
 //       },
-       {
-           name:"Mountain Hammer",
-           spellSchool:"Stone Dragon(Strike)",
-           level:"Crusader 2",
+//       {
+//           name:"Mountain Hammer",
+//           spellSchool:"Stone Dragon(Strike)",
+//           level:"Crusader 2",
+//           castingTime:"1 standard action",
+//           range:"Melee attack",
+//           target:"One creature",
+//           description:"Like a falling avalanche, you strike with the weight and fury of the mountain.\n\nAs part of this maneuver, you make a single melee attack. This attack deals an extra 2d6 points of damage and automatically overcomes damage reduction and hardness.",
+//           maneuverExpended: false,
+//       },
+        {
+           name:"Divine Surge",
+           spellSchool:"Devoted Spirit(Strike)",
+           level:"Crusader 4",
            castingTime:"1 standard action",
            range:"Melee attack",
            target:"One creature",
-           description:"Like a falling avalanche, you strike with the weight and fury of the mountain.\n\nAs part of this maneuver, you make a single melee attack. This attack deals an extra 2d6 points of damage and automatically overcomes damage reduction and hardness.",
+           description:"Your body shakes and spasms as unfettered divine energy courses through it. This power sparks off your weapon and courses into your foe, devastating your enemy but leaving you drained.\n\nAs part of this maneuver, you make a single melee attack that deals an extra 8d8 points of damage.",
            maneuverExpended: false,
        },
        {
@@ -106,7 +116,7 @@ export const Sigmund = {
         },
         {
             name: "Furious Counterstrike (Ex)",
-            description: "Gain a bonus on attack rolls and damage rolls equal to value of delay damage pool divided by 5(rounded down). Max bonus of +6 for now."
+            description: "Gain a bonus on attack rolls and damage rolls equal to value of delay damage pool divided by 5(rounded down). Max bonus of +6."
         },
         {
             name: "Indomitable soul",
