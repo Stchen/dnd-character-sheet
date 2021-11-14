@@ -66,6 +66,16 @@ export const Sigmund = {
 //           description:"Like a falling avalanche, you strike with the weight and fury of the mountain.\n\nAs part of this maneuver, you make a single melee attack. This attack deals an extra 2d6 points of damage and automatically overcomes damage reduction and hardness.",
 //           maneuverExpended: false,
 //       },
+//       {
+//           name:"Mountain Hammer",
+//           spellSchool:"Stone Dragon(Strike)",
+//           level:"Crusader 2",
+//           castingTime:"1 standard action",
+//           range:"Melee attack",
+//           target:"One creature",
+//           description:"Like a falling avalanche, you strike with the weight and fury of the mountain.\n\nAs part of this maneuver, you make a single melee attack. This attack deals an extra 2d6 points of damage and automatically overcomes damage reduction and hardness.",
+//           maneuverExpended: false,
+//       },
         {
            name:"Divine Surge",
            spellSchool:"Devoted Spirit(Strike)",

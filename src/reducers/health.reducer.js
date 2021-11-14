@@ -6,7 +6,7 @@ const initState = {
     health: sigmundInfo.maxHealth,
     delayedDamage: 0
 }
-const delayedDamageMax = 10
+const delayedDamageMax = sigmundInfo.delayedDamagePool
 const damageResistance = sigmundInfo.damageResistance
 
 function heal(currentHealth, hpChange){
@@ -30,7 +30,7 @@ function applyDelayedDamage(currentHealth, hpChange){
 
 function damage(currentHealth, hpChange = 0, delayedDamageMax, currentDelayedDamage, damageResistance){
     const delayDamageLeft = delayedDamageMax - currentDelayedDamage
-    const modifiedDamage = delayDamageLeft == 0 ?
+    const modifiedDamage = delayDamageLeft === 0 ?
         Math.max(hpChange - delayDamageLeft - damageResistance, 1) :
         //delayed damage pool absorbed damage so minimum can be 0.
         Math.max(hpChange - delayDamageLeft - damageResistance, 0)
